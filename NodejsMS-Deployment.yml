@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: your-microservice-name
+  name: nodejs-ms
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: your-microservice-name
+      app: nodejs-ms
   template:
     metadata:
       labels:
-        app: your-microservice-name
+        app: nodejs-ms
     spec:
       containers:
-      - name: your-microservice-name
-        image: your-dockerhub-username or your aws registry name/your-image-name:latest
+      - name: nodejs-ms
+        image: my-repo/node:latest
         ports:
         - containerPort: 8080
