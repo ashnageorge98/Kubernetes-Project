@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: your-microservice-name
-        image: your-dockerhub-username/your-image-name
+        image: your-dockerhub-username or your aws registry name/your-image-name:latest
         ports:
-        - containerPort: 3000
+        - containerPort: 8080
