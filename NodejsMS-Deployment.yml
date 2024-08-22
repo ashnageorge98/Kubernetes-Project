@@ -1,19 +1,19 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: nodejs-ms
+  name: example-ms
 spec:
   replicas: 3
   selector:
     matchLabels:
-      app: nodejs-ms
+      app: example-ms
   template:
     metadata:
       labels:
-        app: nodejs-ms
+        app: example-ms
     spec:
       containers:
-      - name: nodejs-ms
+      - name: example-ms
         image: my-repo/node:latest
         ports:
         - containerPort: 8080
