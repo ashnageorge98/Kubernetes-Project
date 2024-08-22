@@ -1,0 +1,16 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: my-microservice-ingress
+spec:
+  rules:
+  - host: 44.234.50.210
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: my-microservice-service
+            port:
+              number: 80
