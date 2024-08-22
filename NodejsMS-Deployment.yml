@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: example-ms
-        image: my-repo/node:latest
+        image: asgeorge123/node:latest
         ports:
         - containerPort: 8080
